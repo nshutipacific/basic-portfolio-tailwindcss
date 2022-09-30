@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Grid - HTML</title>
+  </head>
+  <body>
+    <div class="grid grid-cols-4 gap-2 mb-4">
+      <div class="border p-4 text-center bg-gray-600">Column 1</div>
+      <div class="border p-4 text-center bg-gray-400">Column 2</div>
+      <div class="border p-4 text-center bg-gray-200">Column 3</div>
+      <div class="border p-4 text-center bg-gray-100">Column 4</div>
+    </div>
+    ​
+    <!-- 
+    sm > small devices min-width of 640px @media (min-width: 640px){..}
+    md > medium devices min-width of 768px @media (min-width: 768px){..}
+    lg > large devices min-width of 1024px @media (min-width: 1024px) {...}
+    xl > extra large devices min-width of 1280px @media (min-width: 1280px) {...}
+    2xl > extra extra large devices min-width of 1536px @media (min-width: 1536px) {..} 
+  -->
+    ​
+    <div class="grid grid-cols-4 md:grid-cols-5 gap-2">
+      <div class="border p-4 text-center bg-gray-600">Column 1</div>
+      <div class="border p-4 text-center bg-gray-400 md:col-span-2">
+        Column 2 - spanned accross two columns
+      </div>
+      <div class="border p-4 text-center bg-gray-200">Column 3</div>
+      <div class="border p-4 text-center bg-gray-100">Column 4</div>
+    </div>
+    ​
+    <h1 class="text-2xl mt-8 mb-8">Flexbox / Grids</h1>
+    ​
+    <div class="flex space-x-4 mb-8">
+      <div class="w-1/2 bg-green-500 h-12 p-4">Flex column 1</div>
+      <div class="w-1/2 bg-green-500 h-12 p-4">Flex column 2</div>
+    </div>
+    ​
+    <div class="flex space-x-4 mb-8">
+      <div class="w-1/4 md:w-1/2 bg-green-500 h-12 p-4">Flex column 1</div>
+      <div class="w-1/4 bg-green-500 h-12 p-4">Flex column 2</div>
+      <div class="w-1/4 bg-green-500 h-12 p-4">Flex column 3</div>
+      <div class="w-1/4 md:w-1/2 bg-green-500 h-12 p-4">Flex column 4</div>
+    </div>
+    ​
+    <div class="flex space-x-4 mb-8">
+      <div class="flex-1 bg-green-500 h-12 p-4">Flex column 1</div>
+      <div class="flex-1 bg-green-500 h-12 p-4">Flex column 2</div>
+      <div class="flex-1 bg-green-500 h-12 p-4">Flex column 3</div>
+      <div class="flex-1 bg-green-500 h-12 p-4">Flex column 4</div>
+      <div class="flex-1 bg-green-500 h-12 p-4">Flex column 5</div>
+      <div class="flex-1 bg-green-500 h-12 p-4">Flex column 6</div>
+      <div class="flex-1 bg-green-500 h-12 p-4">Flex column 7</div>
+    </div>
+    ​
+    <div class="flex space-x-4 mb-8">
+      <div class="flex-1 bg-red-500 h-12 p-4">Flex column 1</div>
+      <div class="flex-1 bg-red-500 h-12 p-4">Flex column 2</div>
+      <div class="flex-1 bg-red-500 h-12 p-4">Flex column 3</div>
+    </div>
+    ​
+    <div class="flex mb-8 justify-start">
+      <div class="bg-green-500 h-12 p-4 mr-4">Column 1</div>
+      <div class="bg-yellow-400 h-12 p-4">Colum 2</div>
+    </div>
+    ​
+    <div class="flex mb-8 justify-end">
+      <div class="bg-green-500 h-12 p-4 mr-4">Column 1</div>
+      <div class="bg-yellow-400 h-12 p-4">Colum 2</div>
+    </div>
+    ​
+    <div class="flex mb-8 justify-center">
+      <div class="bg-green-500 h-12 p-4 mr-4">Column 1</div>
+      <div class="bg-yellow-400 h-12 p-4">Colum 2</div>
+    </div>
+    ​
+    <div class="flex flex-wrap h-12 mb-8 space-x-4 content-center bg-gray-300">
+      <div class="flex-1 bg-pink-500">Column 1</div>
+      <div class="flex-1 bg-pink-500">Column 2</div>
+      <div class="flex-1 bg-pink-500">Column 3</div>
+      <div class="flex-1 bg-pink-500">Column 4</div>
+      <div class="flex-1 bg-pink-500">Column 5</div>
+    </div>
+    ​
+    <div class="flex flex-wrap content-center mb-8 space-y-2">
+      <div class="w-full md:w-1/3 bg-yellow-500">Column 1</div>
+      <div class="w-full md:w-1/3 bg-purple-500">Column 2</div>
+      <div class="w-full md:w-1/3 bg-green-500">Column 3</div>
+      <div class="w-full md:w-1/2 bg-blue-500">Column 4</div>
+      <div class="w-full md:w-1/2 bg-gray-500">Column 5</div>
+    </div>
+    ​
+    <div class="container">
+      <nav class="flex justify-between content-center">
+        <div class="logo">
+          <a href="#"
+            ><img class="rounded-full" src="//via.placeholder.com/50"
+          /></a>
+        </div>
+        <ul
+          class="flex justify-end md:justify-end lg:justify-end content-center md:content-center"
+        >
+          <li class="mr-4 text-blue-500">Welcome</li>
+          <li class="mr-4 text-blue-500">Who are we</li>
+          <li class="mr-4 text-blue-500 text-center">Gallery</li>
+          <li class="text-blue-500">Our Projects</li>
+          <!-- <li class="mr-4 text-blue-500">Visit Us</li>
+          <li class="mr-4 text-blue-500">Request</li>
+          <li class="mr-4 text-blue-500">Contact Me</li> -->
+        </ul>
+      </nav>
+    </div>
+  </body>
+</html>
